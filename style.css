@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+}
+.heading {
+    font-size: 50px;
+    background: linear-gradient(270deg,#5E17EB,#B183BA,#D8C1DD,#F9F1E6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#camera {
+    border: 2px solid white;
+    border-radius: 8px;
+    width: 400px;
+    height: 300px;
+}
+p,b,label {
+    color: white;
+}
+button {
+    position: relative;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 500;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 6px 6px 12px #5E17EB,
+    -6px -6px 12px rgb(48, 47, 47);
+    z-index: 1 ;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+button:hover {
+    color: white;
+}
+button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #5E17EB 0%, #B183BA 100%);
+    transition: 0.5s ease;
+    z-index: -1;
+}
+button:hover::before {
+    width: 100%;
+}
